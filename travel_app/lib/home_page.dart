@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:travel_app/widget/most_popular.dart';
+import 'package:travel_app/widget/travel_info.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -40,13 +42,16 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 10,
           ),
-          Expanded(flex: 5, child: Placeholder()),
+          Expanded(flex: 2, child: TravelBlog()),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Most Popular',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                  'Most Popular',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(15.0),
@@ -57,7 +62,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          Expanded(flex: 3, child: Placeholder())
+          Expanded(flex: 1, child: MostPopular())
         ],
       ),
     );
